@@ -1,0 +1,22 @@
+image: docker:19.03.8
+
+services:
+  - docker:19.03.5-dind
+
+stages:
+  - Dev_build
+    
+variables:
+  DOCKER_DRIVER: overlay2
+  CONTAINER_DEV_IMAGE: gcr.io/business-card-scanner-dfe95/business-card-scanner:dev
+  
+
+Dev_build:
+  stage: Dev_build
+  script:
+    - base64 -d $GCP_SA_KEY | docker login -u _json_key --password-stdin https://gcr.io
+    - docker build -t $CONTAINER_DEV_IMAGE .
+    - docker push $CONTAINER_DEV_IMAGE
+  only:
+    - Amish
+

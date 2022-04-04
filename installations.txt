@@ -1,0 +1,13 @@
+0.  Python:       https://docs.python-guide.org/starting/install3/linux/
+1.  Flask:        https://flask.palletsprojects.com/en/0.12.x/installation/
+2.  Libpostal:    https://github.com/openvenues/pypostal
+3.  Tesseract:    https://tesseract-ocr.github.io/tessdoc/Installation.html
+4.  Pytesseract:  pip install pytesseract
+5.  Regex:        pip install regex
+6.  Phonenumbers: pip install phonenumbers
+7.  Werkzeug:     pip install Werkzeug
+8.  Opencv:       pip install opencv-python
+9.  scipy:        pip install scipy
+10. Imutils:      pip install imutils
+11. Numpy:        pip install numpy
+12. Pandas:       pip install pandas
